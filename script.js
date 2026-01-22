@@ -189,4 +189,6 @@ var {name,age,dept,marks}={
 console.log(name);
 console.log(age);
 console.log(dept);
-console.log(marks);
+console.log(marks
+    
+);
