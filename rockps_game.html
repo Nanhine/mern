@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Rock Paper Scissors</h2>
+
+<button onclick="play('Rock')">Rock</button>
+<button onclick="play('Paper')">Paper</button>
+<button onclick="play('Scissors')">Scissors</button>
+
+<p id="result"></p>
+<script>
+function play(user){
+  let choices = ["Rock","Paper","Scissors"];
+  let comp = choices[Math.floor(Math.random()*3)];
+
+  if(user == comp)
+    result = "Tie";
+  else if(
+    (user=="Rock" && comp=="Scissors") ||
+    (user=="Paper" && comp=="Rock") ||
+    (user=="Scissors" && comp=="Paper")
+  )
+    result = "You Win";
+  else
+    result = "Computer Wins";
+
+  document.getElementById("result").innerHTML =
+    user + " vs " + comp + " → " + result;
+}
+</script>
+</body>
+</html>
