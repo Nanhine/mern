@@ -175,20 +175,99 @@
 // console.log(m4);
 // console.log(m5);
 
-var {name,age,dept,marks}={
-    name:"nandy",
-    age:21,
-    dept:["csd","ece"],
-    marks:{
-        mern:90,
-        java:98,
-        c:65
-    }
+// var {name,age,dept,marks}={
+//     name:"nandy",
+//     age:21,
+//     dept:["csd","ece"],
+//     marks:{
+//         mern:90,
+//         java:98,
+//         c:65
+//     }
 
-}
-console.log(name);
-console.log(age);
-console.log(dept);
-console.log(marks
+// }
+// console.log(name);
+// console.log(age);
+// console.log(dept);
+// console.log(marks);
+
+// //for in loop (gives index of arr elements)
+// arr=[10,20,30,40]
+// for (let i in arr){
+//     console.log(i,arr[i]);
     
-);
+// }var obj={
+//     name:"nandu",
+//     age:20
+
+// }
+// for(let i in obj){
+//     console.log(i,obj[i]);
+// }
+let arr=[10,20,30,40];
+// //map
+// var double_arr=arr.map((i)=>(i*2));
+// console.log(double_arr);
+// //filter
+// var even=arr.filter((i)=>(i%2==0));
+// console.log(even);
+// //reduce
+// var total=arr.reduce((sum,i)=>(sum+i),0);
+// console.log(total);
+
+// var aar1=arr.map((i)=>(i*2)).filter((i)=>(i%2==0)).reduce((sum,i)=>(sum+i),0);
+
+// console.log(aar1);
+//  let num=134;
+//  let isPrime=true;
+//  if(num<=1){
+//     isPrime=false;
+//  }else{
+//     for(let i=2;i<=num/2;i++)
+//     {
+//         if(num%i===0){
+//             isPrime=false;
+//             break;
+//         }
+//     }
+//  }
+//  console.log(isPrime?num+" is a prime":num+"is not a prime");
+
+// //using back tick while printing we can print constant values in ${}    
+// var name="nandu"
+// console.log(`my name is ${name}`);
+// //for each
+// arr.forEach(value,index)=>{
+//     console.log(index,value);
+// }
+// var add =(a,b,callBack)=>{
+//     var result=a+b;
+//     callBack(result);
+// }
+// // add(10,20,(res)=>{console.log(res);})
+
+// var demo=()=>{
+//     console.log("i am call back");
+    
+// }
+// var main=(myfunction)=>{
+//     myfunction()
+// }
+// main(demo)
+var promise=new Promise((resolve,reject)=>{
+    var success=true;
+    if(success){
+        resolve("promise resolved")
+    }
+    else{
+        reject("promise rejected")
+    }
+})
+promise.then((res)=>console.log(res))
+.catch((err)=>console.log(err))
+const getData=()=>{
+    return fetch ("https://jsonplaceholder.typicode.com/posts")
+}
+getData().then((res)=>res.json())
+.then((data)=>console.log(data))
+.catch(err=>console.log(err))
