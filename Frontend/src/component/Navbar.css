@@ -1,0 +1,16 @@
+.navbar{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+ul{
+    list-style:none;
+    background-color:rgb(115, 95, 243);
+    padding:10px;
+}li{
+    background:bisque;
+    padding:10px;
+    border-radius:10px;
+}li:hover{
+
+}

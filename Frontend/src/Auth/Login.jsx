@@ -1,0 +1,40 @@
+import React,{useState} from 'react'
+
+const Login = () => {
+    const [userData,setUserData]=useState({
+        email:"",
+        password:""
+    })
+    const handleChange=(e)=>{
+        
+        setUserData((prev)=>({
+            ...prev,
+            [e.target.name]:e.target.value
+        }
+        ))
+    }
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        console.log(userData);
+    }
+  return (
+    <div>''
+        <form onSubmit={handleSubmit}> 
+            <label>Email:</label>
+            <input type ="email" value={userData.email}
+            name="email"
+            onChange={handleChange}
+            placeholder="enter th email"/>
+            <label>Password:</label>
+            <input type="password" value={userData.password}
+            name="password"
+            onChange={handleChange}
+            placeholder="enter the password"/>
+            <button> Login</button>
+        </form>
+      
+    </div>
+  )
+}
+
+export default Login
