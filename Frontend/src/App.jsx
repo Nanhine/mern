@@ -7,6 +7,7 @@ import Navbar from './component/Navbar'
 import Hook from './Hooks/Hook'
 import UseEffect from './Hooks/UseEffect'
 import UseEffectApi from './Hooks/UseEffectApi'
+import UseReducer from './Hooks/UseReducer'
 import UseRef from './Hooks/UseRef'
 import UseState from './Hooks/UseState'
 import Contact from './pages/Contact'
@@ -30,7 +31,7 @@ const App = () => {
      <Route path='useEffect' element={<UseEffect/>}/>
      <Route path='useEffectApi' element={<UseEffectApi/>}/>
      <Route path='useref' element={<UseRef/>}/>
-    
+     <Route path='usereducer' element={<UseReducer/>}/>
     </Route>
     
      
