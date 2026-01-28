@@ -7,18 +7,14 @@ const Login = () => {
     })
     const handleChange=(e)=>{
         
-        setUserData((prev)=>({
-            ...prev,
-            [e.target.name]:e.target.value
-        }
-        ))
+        setUserData((prev)=>({...prev,[e.target.name]:e.target.value}));
     }
     const handleSubmit=(e)=>{
         e.preventDefault();
         console.log(userData);
     }
   return (
-    <div>''
+    <div>
         <form onSubmit={handleSubmit}> 
             <label>Email:</label>
             <input type ="email" value={userData.email}

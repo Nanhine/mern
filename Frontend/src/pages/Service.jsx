@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import ThemeContext from '../context/ThemeContext';
 
 const Service = () => {
+  const theme = useContext(ThemeContext);
   return (
     <div>
-      service
+      <h1>{theme}</h1>
     </div>
   )
 }
