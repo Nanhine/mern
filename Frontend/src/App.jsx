@@ -5,8 +5,10 @@ import About from './component/About'
 import Counter from './component/Counter'
 import Navbar from './component/Navbar'
 import Hook from './Hooks/Hook'
+import UseCallback from './Hooks/UseCallback'
 import UseEffect from './Hooks/UseEffect'
 import UseEffectApi from './Hooks/UseEffectApi'
+import UseMemo from './Hooks/UseMemo'
 import UseReducer from './Hooks/UseReducer'
 import UseRef from './Hooks/UseRef'
 import UseState from './Hooks/UseState'
@@ -32,6 +34,8 @@ const App = () => {
      <Route path='useEffectApi' element={<UseEffectApi/>}/>
      <Route path='useref' element={<UseRef/>}/>
      <Route path='usereducer' element={<UseReducer/>}/>
+     <Route path='useMemo' element={<UseMemo/>}/>
+     <Route path='usecallback' element={<UseCallback/>}/>
     </Route>
     
      
